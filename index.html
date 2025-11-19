@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>BetGodz — Black & Gold Luxury Casino</title>
+<meta name="description" content="BetGodz — Premium Black & Gold casino concept. Luxury domain, affiliate banners, and domain-for-sale actions." />
+<style>
+  :root{
+    --bg:#070607;
+    --panel:#0f0f10;
+    --muted:#bfc3c6;
+    --gold1:#d4b65a;
+    --gold2:#f5d36b;
+    --accent:#e8c85a;
+    --glass: rgba(255,255,255,0.03);
+    --radius:14px;
+  }
+
+  /* Reset & base */
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+    background: linear-gradient(180deg,var(--bg), #060505 160%);
+    color:#ececec;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.45;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%;height:auto;border-radius:8px}
+
+  /* Page container */
+  .wrap{max-width:1150px;margin:30px auto;padding:28px;}
+
+  /* Header */
+  header.site-header{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  .brand{
+    display:flex;gap:14px;align-items:center;
+  }
+  .logo{
+    width:88px;height:88px;border-radius:14px;
+    background:linear-gradient(135deg, rgba(212,182,90,0.12), rgba(245,211,107,0.06));
+    border:1px solid rgba(255,255,255,0.04);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+  }
+  .logo svg{width:56px;height:56px;display:block;filter: drop-shadow(0 6px 18px rgba(0,0,0,0.6))}
+  .title h1{margin:0;font-size:22px;letter-spacing:0.6px;color:var(--gold2)}
+  .title p{margin:4px 0 0;font-size:13px;color:var(--muted)}
+
+  /* Header actions */
+  .actions{display:flex;gap:10px;align-items:center}
+  .btn{
+    padding:11px 16px;border-radius:12px;font-weight:700;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:10px;
+    text-decoration:none;
+  }
+  .btn-primary{
+    background:linear-gradient(90deg,var(--gold1),var(--gold2));
+    color:#080606;
+    box-shadow:0 8px 30px rgba(213,166,60,0.12);
+  }
+  .btn-ghost{
+    background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)
+  }
+
+  /* Subtle divider */
+  .divider{height:1px;background:linear-gradient(90deg,transparent, rgba(255,255,255,0.03), transparent);margin:22px 0;border-radius:2px}
+
+  /* Main layout */
+  .main{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start}
+  @media(max-width:980px){.main{grid-template-columns:1fr}.actions{width:100%;justify-content:flex-end}}
+
+  /* Left column card */
+  .panel{
+    background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+    border-radius:var(--radius);
+    padding:24px;border:1px solid rgba(255,255,255,0.03);
+    box-shadow:0 10px 40px rgba(0,0,0,0.6);
+  }
+  h2{margin:0 0 10px 0;font-size:20px;color:#fff}
+  .lead{color:var(--muted);margin:8px 0 16px 0;font-size:15px}
+
+  /* Feature grid */
+  .features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+  @media(max-width:980px){.features{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.features{grid-template-columns:1fr}}
+  .feature{
+    background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+    border-radius:10px;padding:12px;border:1px solid rgba(255,255,255,0.02);
+  }
+  .feature h4{margin:0 0 6px 0;color:var(--gold2);font-size:14px}
+  .feature p{margin:0;color:var(--muted);font-size:13px}
+
+  /* Right column (sidebar) */
+  aside.sidebar .panel{padding:18px}
+  .price{font-size:20px;font-weight:800;color:var(--gold2);margin-bottom:6px}
+  .small{font-size:13px;color:var(--muted);margin-bottom:12px}
+
+  /* Featured offers / affiliate gallery */
+  .offers{
+    margin-top:16px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+  @media(max-width:520px){.offers{grid-template-columns:1fr}}
+  .offer-card{
+    border-radius:10px;padding:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+    border:1px solid rgba(255,255,255,0.03);display:flex;align-items:center;gap:10px;
+  }
+  .offer-card a{display:block;flex:1}
+  .offer-card img{width:100%;height:auto;border-radius:8px;display:block}
+
+  /* Full banner row (big) */
+  .banner-row{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+  .banner-row a{flex:1 1 48%;min-width:160px}
+  .banner-row img{border-radius:10px}
+
+  /* Footer */
+  footer.page-foot{margin-top:26px;text-align:center;color:var(--muted);font-size:13px;padding-bottom:40px}
+  footer a{color:var(--accent)}
+
+  /* Small utilities */
+  .meta-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .pill{background:rgba(255,255,255,0.02);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <!-- Lux monogram svg -->
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BetGodz logo">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#d4b65a"/>
+                <stop offset="1" stop-color="#f5d36b"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="100" height="100" rx="14" fill="#0b0b0b"/>
+            <path d="M20 70 L40 30 L60 70 L80 30" fill="none" stroke="url(#g1)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="32" cy="58" r="3.5" fill="#f5d36b"/>
+            <circle cx="68" cy="58" r="3.5" fill="#f5d36b"/>
+          </svg>
+        </div>
+        <div class="title">
+          <h1>BetGodz</h1>
+          <p>Black & Gold • High-Roller Casino Concept</p>
+        </div>
+      </div>
+
+      <div class="actions" role="navigation" aria-label="Header actions">
+        <a class="btn btn-ghost" href="/for-sale.html" title="Domain for sale">Domain For Sale</a>
+        <a class="btn btn-primary" href="mailto:trevormichel8@gmail.com?subject=Offer%20for%20BetGodz.com" title="Make an offer">Make Offer</a>
+      </div>
+    </header>
+
+    <div class="divider" role="presentation"></div>
+
+    <main class="main" role="main">
+      <!-- Left column -->
+      <section class="panel" aria-labelledby="intro-title">
+        <h2 id="intro-title">BetGodz — Luxury Casino & Affiliate Hub</h2>
+        <p class="lead">A high-end brand concept tailored for crypto casinos, VIP affiliates, and premium conversions. This hybrid layout showcases the brand while keeping domain sale actions visible and conversion-ready.</p>
+
+        <div class="meta-row" style="margin-top:10px;">
+          <span class="pill">Premium domain</span>
+          <span class="pill">Affiliate-ready</span>
+          <span class="pill">Crypto friendly</span>
+        </div>
+
+        <div class="features" aria-hidden="false" style="margin-top:16px;">
+          <div class="feature">
+            <h4>Luxury Identity</h4>
+            <p>Black background, gold accents and refined typography for a high-end gaming feel.</p>
+          </div>
+          <div class="feature">
+            <h4>Affiliate Optimized</h4>
+            <p>Designed to display banners and convert users to partners and CPA offers quickly.</p>
+          </div>
+          <div class="feature">
+            <h4>Sale + Monetize</h4>
+            <p>Includes Buy Now + Make Offer actions while keeping monetization via banners.</p>
+          </div>
+        </div>
+
+        <!-- Large banners row (two large) -->
+        <div class="banner-row" aria-label="Featured banners" style="margin-top:18px;">
+          <a href="https://trace.affiliateedge.com/visit/?bta=38545&nci=5725" target="_blank" rel="noopener noreferrer">
+            <img src="https://affiliateedge.ck-cdn.com/tn/serve/?cid=696334" alt="Affiliate banner 1">
+          </a>
+          <a href="https://trace.affiliateedge.com/visit/?bta=38545&nci=5413" target="_blank" rel="noopener noreferrer">
+            <img src="https://affiliateedge.ck-cdn.com/tn/serve/?cid=749078" alt="Affiliate banner 2">
+          </a>
+        </div>
+
+        <!-- Offers grid -->
+        <div style="margin-top:16px;">
+          <h3 style="margin:0 0 8px 0;color:var(--gold2)">Featured Offers</h3>
+          <div class="offers" aria-live="polite">
+            <div class="offer-card">
+              <a href="https://trace.affiliateedge.com/visit/?bta=38545&nci=5668" target="_blank" rel="noopener noreferrer">
+                <img src="https://affiliateedge.ck-cdn.com/tn/serve/?cid=749196" alt="Offer 5668">
+              </a>
+            </div>
+            <div class="offer-card">
+              <a href="https://trace.affiliateedge.com/visit/?bta=38545&nci=5379" target="_blank" rel="noopener noreferrer">
+                <img src="https://affiliateedge.ck-cdn.com/tn/serve/?cid=749197" alt="Offer 5379">
+              </a>
+            </div>
+            <div class="offer-card">
+              <a href="https://trace.affiliateedge.com/visit/?bta=38545&nci=5398" target="_blank" rel="noopener noreferrer">
+                <img src="https://affiliateedge.ck-cdn.com/tn/serve/?cid=749198" alt="Offer 5398">
+              </a>
+            </div>
+            <div class="offer-card">
+              <a href="https://trace.affiliateedge.com/visit/?bta=38545&nci=5986" target="_blank" rel="noopener noreferrer">
+                <img src="https://affiliateedge.ck-cdn.com/tn/serve/?cid=696121" alt="Offer 5986">
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Right column / Sidebar -->
+      <aside class="sidebar">
+        <div class="panel" aria-labelledby="sale-title">
+          <h3 id="sale-title" style="margin:0 0 6px 0;color:var(--gold2)">Domain For Sale — BetGodz.com</h3>
+          <div class="price">$3,500</div>
+          <div class="small">Ready-to-go brand, premium for affiliates, negotiable offers accepted.</div>
+
+          <div style="display:flex;gap:10px;margin-top:12px;">
+            <a class="btn btn-primary" href="https://paypal.me/michel924/3500" target="_blank" rel="noopener noreferrer">Buy Now — PayPal</a>
+            <a class="btn btn-ghost" href="mailto:trevormichel8@gmail.com?subject=Offer%20for%20BetGodz.com">Make Offer</a>
+          </div>
+
+          <div style="margin-top:14px">
+            <h4 style="margin:0 0 8px 0;color:#fff;font-size:15px">Quick Preview</h4>
+            <p class="small">Trusted affiliate banners below — swap or add new creatives anytime.</p>
+
+            <!-- small banner grid -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+              <a href="https://trace.affiliateedge.com/visit/?bta=38545&nci=5443" target="_blank" rel="noopener noreferrer">
+                <img src="https://affiliateedge.ck-cdn.com/tn/serve/?cid=749199" alt="Offer 5443">
+              </a>
+              <a href="https://trace.affiliateedge.com/visit/?bta=38545&nci=5379" target="_blank" rel="noopener noreferrer">
+                <img src="https://affiliateedge.ck-cdn.com/tn/serve/?cid=749197" alt="Offer 5379 (repeat)">
+              </a>
+            </div>
+
+            <!-- small note -->
+            <p class="small" style="margin-top:10px;color:var(--muted)">Tip: Want a custom hero banner or VIP badge? I can create a high-res gold foil badge to increase perceived value.</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="page-foot">
+      © BetGodz.com — Luxury Concept • Contact: <a href="mailto:trevormichel8@gmail.com">trevormichel8@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>
